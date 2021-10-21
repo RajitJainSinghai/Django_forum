@@ -1,6 +1,3 @@
-////////////////////////
-javascript//////////////
-///////////////////////
 
 $(function() {
     // executed when js-menu-icon js clicked

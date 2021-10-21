@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'posts'
+    'posts',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -120,8 +124,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+cloudinary.config(
+    cloud_name="rajitcloud",
+    api_key="737669316615248",
+    api_secret="CkkRvo5SgSZLNON85PN655bF6-A",
+    secure=True
+)
+
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
+
 ]
 
 # Default primary key field type
